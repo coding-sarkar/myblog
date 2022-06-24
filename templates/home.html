@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block mycss %}
+{% load static %}
+<style>
+  .jumbotron {
+    position: relative;
+  }
+  
+  img {
+    width: 250px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 30px;
+    right: 32px;
+  }
+</style>
+{% endblock mycss %}
+
+{% block content %}
+<br />
+<div class="jumbotron">
+  <h1 class="display-4 text-dark">Casual Uprising</h1>
+  <p class="lead text-muted">This is our bloging website built with Django 🐍</p>
+  <p class="lead">
+    <a href="{% url 'article_list' %}" class="btn btn-primary btn-lg" role="button">View All Articles</a>
+  </p>
+  <img class="rounded" src="{% static 'nyantocat.gif' %}" alt="">
+</div>
+<footer class="navbar fixed-bottom justify-content-center" style="background-color: #e3f2fd;">Made with ❤️ from 🇮🇳</footer>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block mycss %}
+<style>
+  p em {
+    color: steelblue;
+  }
+</style>
+{% endblock mycss %}
+
+{% block content %}
+<h1>Delete</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  <p>Are you sure you want to delete &ldquo;<em>{{ article.title }}</em>&rdquo; ?</p>
+  <button class="btn btn-danger ml-2" type="submit">Confirm</button>
+</form>
+{% endblock content %}

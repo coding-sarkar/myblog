@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block mycss %}
+<style>
+  label {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px;
+  }
+
+  h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* border-bottom: 1px solid #aaa; */
+    padding-bottom: 5px;
+    box-shadow: 0 3px #ddd;
+    margin-bottom: 30px;
+  }
+</style>
+{% endblock mycss %}
+
+{% block content %}
+<h1>NEW ARTICLE</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  {{ form|crispy}}
+  <button type="submit" class="btn btn-success ml-2">Save</button>
+</form>
+{% endblock content %}
