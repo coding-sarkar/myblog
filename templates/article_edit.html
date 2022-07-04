@@ -24,6 +24,7 @@
   <h1>EDIT</h1>
   <form action="" method="post">
     {% csrf_token %}
+    {{ form.media }}
     {{ form|crispy}}
     <button type="submit" class="btn btn-info ml-2">Update</button>
   </form>

@@ -25,6 +25,7 @@
 <h1>NEW ARTICLE</h1>
 <form action="" method="post">
   {% csrf_token %}
+  {{ form.media }}
   {{ form|crispy}}
   <button type="submit" class="btn btn-success ml-2">Save</button>
 </form>
